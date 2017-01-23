@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infoundation - {{ title }}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+    <!-- Google font import here. -->
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+</head>
+<body>
+    <div id="skip"><a href="#innhold">Gå til innhold</a></div>
+
+    <div id="innhold"></div>
+    {% block content %}
+    {% endblock %}
+
+    <script src="../assets/js/app.min.js"></script>
+</body>
+</html>

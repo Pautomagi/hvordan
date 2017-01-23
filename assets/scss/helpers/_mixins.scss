@@ -1,0 +1,75 @@
+@mixin gutters($sides: (top, left, right, bottom), $modifiers: (2, 3, 4, 5)) {
+  @each $breakpoint, $gutter in $grid-column-gutter {
+    @include breakpoint($breakpoint) {
+
+      .#{$breakpoint}-m-none {
+        margin:0;
+      }
+
+      @each $side in $sides {
+
+        .#{$breakpoint}-m-#{$side} {
+          margin-#{$side}: rem-calc($gutter);
+        }
+        .#{$breakpoint}-p-#{$side} {
+          padding-#{$side}: rem-calc($gutter);
+        }
+
+        @each $modifier in $modifiers{
+
+          .#{$breakpoint}-m-#{$side}-#{$modifier} {
+            margin-#{$side}: rem-calc($gutter * $modifier);
+          }
+          .#{$breakpoint}-p-#{$side}-#{$modifier} {
+            padding-#{$side}: rem-calc($gutter * $modifier);
+          }
+
+        }
+
+      }
+    }
+  }
+}
+
+
+/**
+ * Responsive løsning for paragraphs for article elements.
+ * @include paragraphSizes($paragraph-sizes);
+ *
+ * $paragraph-sizes: (
+ *   small: (16),
+ *   medium: (20),
+ *  );
+ *
+ * @type {font-size:{val}}
+ */
+@mixin paragraphSizes($paragraph-sizes) {
+  @each $font-size, $paragraphs in $paragraph-sizes {
+    @include breakpoint($font-size) {
+      @each $font-size in $paragraphs {
+        p.lead {
+          font-size: rem-calc($font-size*1.2);
+        }
+        p, li, a {
+          font-size: rem-calc($font-size);
+        }
+      }
+    }
+  }
+}
+
+// Give a specific item some font size.
+/*
+$sizes: (small: (16), medium: (20) );
+@include givefontsize($sizes);
+*/
+@mixin givefontsize($paragraph-sizes: $paragraph-sizes) {
+  @each $font-size, $paragraphs in $paragraph-sizes {
+    @include breakpoint($font-size) {
+      @each $font-size in $paragraphs {
+          font-size: rem-calc($font-size);
+          line-height: rem-calc($font-size * 1.2);
+      }
+    }
+  }
+}
