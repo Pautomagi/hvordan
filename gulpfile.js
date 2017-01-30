@@ -50,7 +50,11 @@ gulp.task('js', function() {
 gulp.task('svg', function() {
     return gulp
         .src(pkg.paths.src.svg + '/**/*.svg')
-        .pipe($.svgo())
+        .pipe(gutil.env.type === 'pretty' ? $.svgo({
+            js2svg: {
+                pretty: true
+            }
+        }) : $.svgo())
         .pipe(gulp.dest(pkg.paths.src.svg))
 });
 
@@ -67,9 +71,7 @@ gulp.task('templates', function() {
 
 gulp.task('serve', function() {
     browserSync.init({
-        server: {
-            baseDir: pkg.paths.dist.base
-        }
+        server: { baseDir: pkg.paths.dist.base }
     });
 });
 
