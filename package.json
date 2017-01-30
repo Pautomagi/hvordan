@@ -11,9 +11,8 @@
   "paths": {
     "src": {
       "base": "./src/",
-      "css": "./src/css/",
       "js": "./assets/js/",
-      "img": "./src/img/",
+      "img": "./assets/img/",
       "svg": "./assets/img/svg",
       "scss": "./assets/scss/"
     },
@@ -21,8 +20,8 @@
       "base": "./dist/",
       "css": "./dist/assets/css/",
       "js": "./dist/assets/js/",
-      "img": "./dist/img/",
-      "svg": "./dist/img/svg"
+      "img": "./dist/assets/img/",
+      "svg": "./dist/assets/img/svg"
     },
     "scss": [
       "node_modules/foundation-sites/scss",
