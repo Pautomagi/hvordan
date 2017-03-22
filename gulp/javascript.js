@@ -2,7 +2,7 @@ module.exports = function(gulp, $, pkg, stylish) {
     return function() {
         return gulp
         .src([
-            './assets/js/custom/*.js'
+            pkg.paths.src.js + '/custom/*.js'
         ])
         .pipe($.plumber())
         .pipe($.jshint())
