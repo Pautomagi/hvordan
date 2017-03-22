@@ -8,20 +8,20 @@
     "type": "git"
   },
   "private": true,
-    "deploy": {
-      "staging": {
-        "hostname": "inhub.no",
-        "username": "root",
-        "destination": "/var/www/hvordan",
-        "port": 2248
-      },
-      "production": {
-        "hostname": "",
-        "username": "",
-        "destination": "",
-        "port": 22
-      }
+  "deploy": {
+    "staging": {
+      "hostname": "inhub.no",
+      "username": "root",
+      "destination": "/var/www/hvordan",
+      "port": 2248
     },
+    "production": {
+      "hostname": "",
+      "username": "",
+      "destination": "",
+      "port": 22
+    }
+  },
   "paths": {
     "src": {
       "base": "./src/",
