@@ -8,6 +8,20 @@
     "type": "git"
   },
   "private": true,
+    "deploy": {
+      "staging": {
+        "hostname": "inhub.no",
+        "username": "root",
+        "destination": "/var/www/hvordan",
+        "port": 2248
+      },
+      "production": {
+        "hostname": "",
+        "username": "",
+        "destination": "",
+        "port": 22
+      }
+    },
   "paths": {
     "src": {
       "base": "./src/",
@@ -56,6 +70,7 @@
     "motion-ui": "^1.2.2"
   },
   "dependencies": {
-    "gulp-rsync": "^0.0.7"
+    "gulp-rsync": "^0.0.7",
+    "minimist": "^1.2.0"
   }
 }
