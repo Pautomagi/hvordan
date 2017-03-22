@@ -75,6 +75,38 @@ gulp.task('serve', function() {
     });
 });
 
+gulp.task('deploy', ['sass', 'js', 'svg', 'templates'], function() {
+    // Dirs and Files to sync
+    rsyncPaths = [pkg.paths.dist.base];
+
+    // Default options for rsync
+    rsyncConf = {
+        root: 'dist/',
+        progress: true,
+        incremental: true,
+        relative: true,
+        emptyDirectories: true,
+        recursive: true,
+        clean: true,
+        compress: true,
+        exclude: [],
+    };
+
+    rsyncConf.hostname = 'inhub.no'; // hostname
+    rsyncConf.username = 'root'; // ssh username
+    rsyncConf.destination = '/var/www/' + pkg.name; // path where uploaded files go
+    rsyncConf.port = 2248;
+
+    return gulp.src(pkg.paths.dist.base + '/**').pipe($.rsync(rsyncConf));
+
+    function throwError(taskName, msg) {
+        throw new gutil.PluginError({
+            plugin: taskName,
+            message: msg
+        });
+    }
+});
+
 gulp.task('default', ['sass', 'svg', 'js', 'templates', 'serve'], function() {
     gulp.watch(pkg.paths.src.scss + '/**/*.scss', ['sass']);
     gulp.watch(pkg.paths.src.svg + '/**/*.svg', ['svg']);

@@ -54,5 +54,8 @@
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
     "motion-ui": "^1.2.2"
+  },
+  "dependencies": {
+    "gulp-rsync": "^0.0.7"
   }
 }
