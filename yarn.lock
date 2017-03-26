@@ -2201,6 +2201,10 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.1"
     yallist "^2.0.0"
 
+luxbar@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/luxbar/-/luxbar-0.3.2.tgz#83410b9d1f135b54d7b1393eae432087f9abcc4a"
+
 magic-string@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.14.0.tgz#57224aef1701caeed273b17a39a956e72b172462"

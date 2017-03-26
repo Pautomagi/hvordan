@@ -1,10 +1,10 @@
 var gulp        = require('gulp'),
     $           = require('gulp-load-plugins')(),
-    pkg         = require('./package.json');
+    pkg         = require('./package.json'),
     argv        = require('minimist')(process.argv),
     gutil       = require('gulp-util'),
     stylish     = require('jshint-stylish'),
-    browserSync = require('browser-sync').create(),
+    browserSync = require('browser-sync').create();
 
 // Define tasks
 gulp.task('serve',      require('./gulp/serve')(pkg, browserSync))

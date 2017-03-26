@@ -39,7 +39,8 @@
     },
     "scss": [
       "node_modules/foundation-sites/scss",
-      "node_modules/motion-ui/src"
+      "node_modules/motion-ui/src",
+      "node_modules/luxbar/scss"
     ]
   },
   "vars": {
@@ -71,6 +72,7 @@
   },
   "dependencies": {
     "gulp-rsync": "^0.0.7",
+    "luxbar": "^0.3.2",
     "minimist": "^1.2.0"
   }
 }
