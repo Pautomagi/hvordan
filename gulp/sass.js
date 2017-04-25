@@ -4,11 +4,11 @@ module.exports = function(gulp, $, pkg, browserSync) {
         return gulp
         .src(pkg.paths.src.scss + pkg.vars.scssName)
         .pipe($.sass({
-            includePaths: pkg.paths.scss,
-            outputStyle: 'compressed'
+            includePaths : pkg.paths.scss,
+            outputStyle  : 'compressed'
         }).on('error', $.sass.logError))
         .pipe($.autoprefixer({
-            browsers: ['last 2 versions', 'ie >= 9']
+            browsers : ['last 2 versions', 'ie >= 9']
         }))
         .pipe(s)
         .pipe($.notify({
@@ -16,7 +16,7 @@ module.exports = function(gulp, $, pkg, browserSync) {
             title : function() {
                 return 'Sass compiled'
             },
-            message: function() {
+            message : function() {
                 return 'Filstørrelse: ' + s.prettySize;
             }
             })

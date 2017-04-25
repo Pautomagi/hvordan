@@ -2,18 +2,16 @@ module.exports = function (gulp, $, pkg, argv, gutil) {
     return function () {
             // Dirs and Files to sync
             rsyncPaths = [pkg.paths.dist.base];
-
-            // Default options for rsync
-            rsyncConf = {
-                root: 'dist/',
-                progress: true,
-                incremental: true,
-                relative: true,
-                emptyDirectories: true,
-                recursive: true,
-                clean: true,
-                compress: true,
-                exclude: [],
+            rsyncConf  = {
+                root             : 'dist/',
+                progress         : true,
+                incremental      : true,
+                relative         : true,
+                emptyDirectories : true,
+                recursive        : true,
+                clean            : true,
+                compress         : true,
+                exclude          : [],
             };
 
             // Setup deployment environment
@@ -35,8 +33,8 @@ module.exports = function (gulp, $, pkg, argv, gutil) {
 
             function throwError(taskName, msg) {
                 throw new gutil.PluginError({
-                    plugin: taskName,
-                    message: msg
+                    plugin  : taskName,
+                    message : msg
                 });
             }
     };

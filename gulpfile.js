@@ -20,8 +20,8 @@ gulp.task('deploy', ['sass', 'svg', 'js', 'templates'], require('./gulp/deploy')
 
 // Default task
 gulp.task('default', ['sass', 'svg', 'js', 'templates', 'serve'], function() {
-    gulp.watch(pkg.paths.src.js     + '/**/*.js',     ['js']);
-    gulp.watch(pkg.paths.src.svg    + '/**/*.svg',    ['svg']);
-    gulp.watch(pkg.paths.src.scss   + '/**/*.scss',   ['sass']);
-    gulp.watch(pkg.paths.src.base   + '/**/*.html',   ['templates']);
+    gulp.watch(pkg.paths.src.js   + '/**/*.js',     ['js']);
+    gulp.watch(pkg.paths.src.svg  + '/**/*.svg',    ['svg']);
+    gulp.watch(pkg.paths.src.scss + '/**/*.scss',   ['sass']);
+    gulp.watch(pkg.paths.src.base + '/**/*.html',   ['templates']);
 })
