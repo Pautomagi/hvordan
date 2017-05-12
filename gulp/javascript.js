@@ -7,10 +7,10 @@ module.exports = function(gulp, $, pkg, stylish) {
         .pipe($.plumber())
         .pipe($.jshint())
         .pipe($.jshint.reporter(stylish))
-        .pipe($.concat('scripts.js'))
+        .pipe($.concat('app.js'))
         .pipe(gulp.dest(pkg.paths.dist.js))
         .pipe($.rename({suffix: '.min'}))
         .pipe($.uglify())
-        .pipe(gulp.dest(pkg.paths.dist.js))
-    }
-}
+        .pipe(gulp.dest(pkg.paths.dist.js));
+    };
+};
