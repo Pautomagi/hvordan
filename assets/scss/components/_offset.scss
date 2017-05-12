@@ -1,13 +1,16 @@
 .offset {
-    background: map-get($foundation-palette, success);
     display: flex;
     align-items: center;
-    div:nth-child(1) {
-        flex: 1.5;
-    }
+    flex-direction: column;
+    @include breakpoint(large){ flex-direction: row; }
+    div:nth-child(1) { flex: 1.5; }
     div:nth-child(2) {
         flex: 1.5;
-        background: map-get($foundation-palette, primary);
-        margin-right: -15rem;
+        @include breakpoint(large){
+            margin-right: -20%;
+        }
     }
+}
+.offset__demo {
+    background: $primary-color;
 }
