@@ -1,18 +1,18 @@
 {
   "name": "hvordan",
   "version": "1.0.0",
-  "description": "Bare test for innoventi intern.",
+  "description": "Base gulp setup with foundation.",
   "main": "gulpfile.js",
   "repository": {
-    "url": "https://git@git.innoventi.beanstalkapp.com:/innoventi/hvordan.git",
+    "url": "https://bitbucket.org/pautomagi/hvordan.git",
     "type": "git"
   },
   "private": true,
   "deploy": {
     "staging": {
-      "hostname": "inhub.no",
+      "hostname": "skilpadde",
       "username": "root",
-      "destination": "/var/www/hvordan",
+      "destination": "/var/www/skilpadde",
       "port": 2248
     },
     "production": {
