@@ -47,7 +47,7 @@
     "scssName": "app.scss",
     "cssName": "app.css"
   },
-  "author": "Ulrik Hovstad <ulrik@innoventi.no>",
+  "author": "Ulrik Hovstad <ulrik@automagisk.net>",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.18.6",
