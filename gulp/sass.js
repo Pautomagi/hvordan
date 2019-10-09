@@ -7,9 +7,7 @@ module.exports = function(gulp, $, pkg, browserSync) {
             includePaths : pkg.paths.scss,
             outputStyle  : 'compressed'
         }).on('error', $.sass.logError))
-        .pipe($.autoprefixer({
-            browsers : ['last 2 versions', 'ie >= 9']
-        }))
+        .pipe($.autoprefixer())
         .pipe(s)
         .pipe($.notify({
             onLast: true,

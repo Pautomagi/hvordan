@@ -7,6 +7,9 @@
     "url": "https://bitbucket.org/pautomagi/hvordan.git",
     "type": "git"
   },
+  "scripts": {
+    "start": "gulp"
+  },
   "private": true,
   "deploy": {
     "staging": {
@@ -50,29 +53,35 @@
   "author": "Ulrik Hovstad <ulrik@automagisk.net>",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.18.6",
-    "foundation-sites": "^6.3.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
+    "browser-sync": "^2.26.7",
+    "foundation-sites": "^6.5.3",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
-    "gulp-jshint": "^2.0.4",
-    "gulp-load-plugins": "^1.4.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-size": "^2.1.0",
-    "gulp-svgo": "^1.0.3",
-    "gulp-twig": "^0.7.0",
-    "gulp-uglify": "^2.0.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-size": "^3.0.0",
+    "gulp-svgo": "^2.1.1",
+    "gulp-twig": "^1.2.0",
+    "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
-    "jshint": "^2.9.4",
+    "jshint": "^2.10.2",
     "jshint-stylish": "^2.2.1",
-    "motion-ui": "^1.2.2"
+    "motion-ui": "^2.0.3"
   },
   "dependencies": {
+    "gulp": "^4.0.2",
     "gulp-rsync": "^0.0.7",
     "luxbar": "^0.3.2",
     "minimist": "^1.2.0"
-  }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
 }
