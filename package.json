@@ -1,82 +1,49 @@
 {
   "name": "hvordan",
   "version": "1.0.0",
-  "description": "Base gulp setup with foundation.",
+  "description": "Base webpack setup with twig and bootstrap for prototyping.",
   "main": "gulpfile.js",
   "repository": {
     "url": "https://bitbucket.org/pautomagi/hvordan.git",
     "type": "git"
   },
   "scripts": {
-    "start": "gulp"
+    "start": "webpack-dev-server",
+    "build": "webpack --mode=production"
   },
   "private": true,
-  "deploy": {
-    "staging": {
-      "hostname": "skilpadde",
-      "username": "root",
-      "destination": "/var/www/skilpadde",
-      "port": 2248
-    },
-    "production": {
-      "hostname": "",
-      "username": "",
-      "destination": "",
-      "port": 22
-    }
-  },
-  "paths": {
-    "src": {
-      "base": "./src/",
-      "js": "./assets/js/",
-      "img": "./assets/img/",
-      "svg": "./assets/img/svg",
-      "scss": "./assets/scss/"
-    },
-    "dist": {
-      "base": "./dist/",
-      "css": "./dist/assets/css/",
-      "js": "./dist/assets/js/",
-      "img": "./dist/assets/img/",
-      "svg": "./dist/assets/img/svg"
-    },
-    "scss": [
-      "node_modules/foundation-sites/scss",
-      "node_modules/motion-ui/src",
-      "node_modules/luxbar/scss"
-    ]
-  },
-  "vars": {
-    "scssName": "app.scss",
-    "cssName": "app.css"
-  },
   "author": "Ulrik Hovstad <ulrik@automagisk.net>",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "foundation-sites": "^6.5.3",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-jshint": "^2.1.0",
-    "gulp-load-plugins": "^2.0.1",
-    "gulp-notify": "^3.2.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-size": "^3.0.0",
-    "gulp-svgo": "^2.1.1",
-    "gulp-twig": "^1.2.0",
-    "gulp-uglify": "^3.0.2",
-    "gulp-util": "^3.0.8",
-    "jshint": "^2.10.2",
-    "jshint-stylish": "^2.2.1",
-    "motion-ui": "^2.0.3"
+    "@babel/core": "^7.7.5",
+    "@fullhuman/postcss-purgecss": "^1.3.0",
+    "babel-loader": "^8.0.6",
+    "bootstrap": "^4.4.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.0",
+    "gulp-rsync": "^0.0.7",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.4.1",
+    "luxbar": "^0.3.2",
+    "mini-css-extract-plugin": "^0.8.2",
+    "minimist": "^1.2.0",
+    "popper.js": "^1.16.0",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "raw-loader": "^4.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.2",
+    "twig-html-loader": "^0.1.7",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-copy-plugin": "^0.0.4",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-manifest-plugin": "^2.2.0",
+    "webpack-notifier": "^1.8.0"
   },
   "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-rsync": "^0.0.7",
-    "luxbar": "^0.3.2",
-    "minimist": "^1.2.0"
+    "node-sass": "^4.13.0"
   },
   "browserslist": [
     "last 1 version",
