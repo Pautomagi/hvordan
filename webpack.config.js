@@ -14,11 +14,18 @@ module.exports = {
     output: {
         publicPath: '/',
         path: path.join(__dirname, './web'),
-        filename: '[name].[hash].js',
+        filename: '[name].[chunkhash].js',
     },
     module: {
         rules: rules
     },
     plugins: plugins,
+    optimization: {
+      splitChunks: {
+          name: 'vendor',
+          chunks: 'all',
+          minChunks : 3,
+      }
+  },
     watch: false,
 };

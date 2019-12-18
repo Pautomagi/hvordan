@@ -59,7 +59,7 @@ module.exports = [
         chunkFilename: '[id].css',
     }),
 
-    new CopyWebpackPlugin([{ from: './assets', to: './assets' }]),
+    // new CopyWebpackPlugin([{ from: './assets', to: './assets' }]),
     new CleanWebpackPlugin({
         protectWebpackAssets: true,
         cleanOnceBeforeBuildPatterns: [],
