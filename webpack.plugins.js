@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -73,7 +73,7 @@ module.exports = [
         ],
     }),
 
-    new ManifestPlugin({
+    new WebpackManifestPlugin({
         filter: ({ name }) => name.endsWith('.js') || name.endsWith('.css'),
     }),
 ].concat(htmlPlugins);
